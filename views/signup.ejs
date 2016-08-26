@@ -1,7 +1,15 @@
-<% include _header %>
+<!DOCTYPE html>
+<head>
 
-<h1>Sign up</h1>
+<h1>Sign Up</h1>
 
-<!-- TODO: Create a form element to let the user Sign Up at the /signup route -->
+	<form action="/signup" method="post">
+	<input type="text" name="username" placeholder="Username" class="form-control" required autofocus>
+	<br>
+	<input type="text" name="password" placeholder="Password" class="form-control" required><br>
+	<input type="submit" value="Sign Up" class="btn btn-primary btn-block">
+	</form>
 
-<% include _footer %>
+</head>
+<footer>
+</footer>

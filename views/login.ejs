@@ -1,7 +1,15 @@
-<% include _header %>
+<!DOCTYPE html>
+<head>
 
 <h1>Log in</h1>
 
-<!-- TODO: Create a form element to let the user login at the /login route -->
+	<form action="/login" method="post">
+	<input type="text" name="username" placeholder="Username" class="form-control" required autofocus>
+	<br>
+	<input type="text" name="password" placeholder="Password" class="form-control" required><br>
+	<input type="submit" value="Login" class="btn btn-primary btn-block">
+	</form>
 
-<% include _footer %>
+</head>
+<footer>
+</footer>

@@ -13,11 +13,13 @@ var port = 8080;
 var app = express();
 
 // TODO: Add your mongolab uri
-var uri = '';
+var uri = 'mongodb://' + process.env.dhs-16y1j23 + ":" + process.env.password + "@ds145395.mlab.com:45395/dhs-webdev";
 
 mongoose.Promise = global.Promise;
 
 // TODO: Connect to mongodb using mongoose URI
+mongoose.connect(uri);
+
 // Search the mongoose documentation for the syntax!
 
 setUpPassport();
@@ -31,7 +33,7 @@ app.use(cookieParser());
 // TODO: Get a random hash e.g. 'd1761ab3fdf2ae223438738dd0891503' 
 // and put it into 'secret'
 app.use(session({
-    secret: '',
+    secret: 'd7b49f975b87ebf1cec80c4e109a8513',
     resave: true, 
     saveUninitialized: true
 }));

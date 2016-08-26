@@ -34,6 +34,11 @@ router.post('/signup', function(req, res, next) {
         
         // TODO: instantiate a new User
         // and save it to the database
+		var newUser = new User((
+			username: username
+			password: password
+		));
+		newUser.save(next);
     });
 
 }, passport.authenticate('login', {
